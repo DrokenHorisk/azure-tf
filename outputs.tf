@@ -12,5 +12,5 @@ output "container_registry_login" {
 
 
 output "sql_server_fqdn" {
-  value = azurerm_mssql_server.mssql_server.fully_qualified_domain_name
+  value = azurerm_mssql_server.mssql_server_dev.fully_qualified_domain_name
 }
