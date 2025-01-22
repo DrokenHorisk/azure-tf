@@ -5,7 +5,7 @@ variable "resource_group_name" {
 
 variable "location" {
   description = "Emplacement de l'infrastructure"
-  default     = "East US"
+  default     = "France South"
 }
 
 variable "aks_cluster_name" {
