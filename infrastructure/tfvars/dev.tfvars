@@ -1,0 +1,9 @@
+resource_group_name = "dev-resource-group"
+location            = "West Europe"
+vnet_name           = "dev-vnet"
+address_space       = ["10.0.0.0/16"]
+subnet_name         = "dev-subnet"
+subnet_prefixes     = ["10.0.1.0/24"]
+vm_name             = "dev-webserver"
+admin_username      = "devadmin"
+admin_password      = "DevPassword123!"
