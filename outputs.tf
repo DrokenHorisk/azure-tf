@@ -10,6 +10,7 @@ output "container_registry_login" {
   value = azurerm_container_registry.acr.login_server
 }
 
+
 output "sql_server_fqdn" {
   value = azurerm_mssql_server.mssql_server.fully_qualified_domain_name
 }
