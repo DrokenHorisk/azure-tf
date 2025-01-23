@@ -1,15 +1,19 @@
 output "resource_group_name" {
-  value = azurerm_resource_group.rg.name
+  value = module.resource_group.resource_group_name
 }
 
-output "aks_cluster_name" {
-  value = azurerm_kubernetes_cluster.aks.name
+output "resource_group_id" {
+  value = module.resource_group.resource_group_id
 }
 
-output "container_registry_login" {
-  value = azurerm_container_registry.acr.login_server
+output "vnet_name" {
+  value = module.network.vnet_name
 }
 
-output "sql_server_fqdn" {
-  value = azurerm_mssql_server.mssql_server_dev.fully_qualified_domain_name
+output "vnet_id" {
+  value = module.network.vnet_id
+}
+
+output "subnet_ids" {
+  value = module.network.subnet_ids
 }
