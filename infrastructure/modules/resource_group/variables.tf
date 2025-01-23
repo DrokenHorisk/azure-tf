@@ -1,9 +1,9 @@
 variable "rg_name" {
-  description = "Nom du groupe de ressources"
   type        = string
+  description = "Resource Group Name"
 }
 
 variable "location" {
-  description = "Location Azure"
   type        = string
+  description = "Azure Region"
 }

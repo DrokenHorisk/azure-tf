@@ -1,29 +1,30 @@
 variable "vnet_name" {
-  description = "Nom du réseau virtuel"
   type        = string
-}
-
-variable "location" {
-  description = "Emplacement Azure"
-  type        = string
+  description = "Virtual Network Name"
 }
 
 variable "resource_group_name" {
-  description = "Nom du groupe de ressources"
   type        = string
+  description = "Resource Group Name"
+}
+
+variable "location" {
+  type        = string
+  description = "Azure Region"
 }
 
 variable "address_space" {
-  description = "Plage d'adresses du réseau"
+  type        = list(string)
+  description = "Address space for Virtual Network"
+  default     = ["10.0.0.0/16"]
+}
+
+variable "subnet_names" {
+  description = "List of subnet names"
   type        = list(string)
 }
 
-variable "subnet_name" {
-  description = "Nom du sous-réseau"
-  type        = string
-}
-
 variable "subnet_prefixes" {
-  description = "Plages d'adresses du sous-réseau"
+  description = "List of subnet CIDR prefixes"
   type        = list(string)
 }

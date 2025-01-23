@@ -1,36 +1,29 @@
 variable "vm_name" {
-  description = "Nom de la VM"
-  type        = string
-}
-
-variable "location" {
-  description = "Emplacement Azure"
+  description = "Name of the VM"
   type        = string
 }
 
 variable "resource_group_name" {
-  description = "Nom du groupe de ressources"
+  description = "Resource group name"
+  type        = string
+}
+
+variable "location" {
+  description = "Azure region"
   type        = string
 }
 
 variable "subnet_id" {
-  description = "ID du sous-réseau"
+  description = "Subnet ID for the VM"
   type        = string
 }
 
-variable "vm_size" {
-  description = "Taille de la VM"
-  type        = string
-  default     = "Standard_B1s"
-}
-
-variable "admin_username" {
-  description = "Nom d'utilisateur administrateur"
+variable "private_ip_address" {
+  description = "Private IP address of the VM"
   type        = string
 }
 
-variable "admin_password" {
-  description = "Mot de passe administrateur"
+variable "ssh_public_key" {
+  description = "SSH public key for admin access"
   type        = string
-  sensitive   = true
 }
