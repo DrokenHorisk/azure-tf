@@ -28,5 +28,7 @@ resource "azurerm_network_interface" "web" {
     name                          = "webserver-ip-config"
     subnet_id = azurerm_subnet.subnet[0].id
     private_ip_address_allocation = "Dynamic"
+    network_interface_id = module.network.nic_id  # Ajuster selon l'output correct
+
   }
 }

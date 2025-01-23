@@ -111,10 +111,6 @@ resource "azurerm_virtual_machine" "web" {
     admin_username = var.admin_username
   }
 
-  os_profile_linux_config {
-    disable_password_authentication = false
-  }
-
   storage_os_disk {
     name              = "${var.vm_name}-osdisk"
     caching           = "ReadWrite"
@@ -127,5 +123,8 @@ resource "azurerm_virtual_machine" "web" {
     offer     = "UbuntuServer"
     sku       = "18.04-LTS"
     version   = "latest"
+  }
+  os_profile_linux_config {
+    disable_password_authentication = true
   }
 }

@@ -103,3 +103,14 @@ variable "log_analytics_workspace_name" {
   type        = string
   description = "Name of the Log Analytics Workspace"
 }
+
+variable "vm_size" {
+  description = "Size of the virtual machine"
+  type        = string
+  default     = "Standard_B1s"
+}
+
+variable "network_interface_id" {
+  description = "ID of the network interface to attach to the VM"
+  type        = string
+}

@@ -21,15 +21,20 @@ module "network" {
 #############################################################
 # Virtual Machine
 module "vm_apache" {
-  source              = "./infrastructure/modules/vm_apache"
-  vm_name             = var.vm_name
-  resource_group_name = module.resource_group.name
-  location            = var.location
-  subnet_id           = module.network.subnet_id
-  private_ip_address  = module.network.private_ip_address
-  ssh_public_key      = file("~/.ssh/id_rsa.pub")
-  depends_on          = [module.network]
+  source               = "./infrastructure/modules/vm_apache"
+  vm_name              = var.vm_name
+  resource_group_name  = module.resource_group.name
+  location             = var.location
+  subnet_id            = module.network.subnet_id
+  private_ip_address   = module.network.private_ip_address
+  network_interface_id = module.network.network_interface_id  # Ajouté ici
+  vm_size              = var.vm_size                           # Ajouté ici
+  admin_username       = var.admin_username                    # Ajouté ici
+  ssh_public_key       = file("~/.ssh/id_rsa.pub")
+
+  depends_on = [module.network]
 }
+
 
 
 #############################################################

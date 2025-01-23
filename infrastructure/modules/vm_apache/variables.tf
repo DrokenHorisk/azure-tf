@@ -27,3 +27,18 @@ variable "ssh_public_key" {
   description = "SSH public key for admin access"
   type        = string
 }
+
+variable "network_interface_id" {
+  description = "ID of the network interface to attach to the VM"
+  type        = string
+}
+
+variable "vm_size" {
+  description = "Size of the virtual machine"
+  type        = string
+}
+
+variable "admin_username" {
+  description = "Admin username for the VM"
+  type        = string
+}
